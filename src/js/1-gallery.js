@@ -69,7 +69,7 @@ const images = [
     },
     ];
   
-  document.addEventListener('DOMContentLoaded', (event) => {
+  
   const gallery = document.querySelector('.gallery');
   const markup = images.reduce((html, image) => {
     return (
@@ -98,7 +98,7 @@ const images = [
     // });
     
     // gallery.addEventListener('click', onImageClick);
-  });
+
   
   const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
