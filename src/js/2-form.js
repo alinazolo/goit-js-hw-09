@@ -16,7 +16,8 @@ const formEL = {
     if (savedFormData) {
       email.value = savedFormData.email.trim() || '';
       message.value = savedFormData.message.trim() || '';
-      formData = savedFormData;
+      formData.email = savedFormData.email.trim();
+      formData.message = savedFormData.message.trim();
     }
   }
   
@@ -29,6 +30,8 @@ const formEL = {
     console.log('Form data:', formData);
     e.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
+    formData.email = "";
+    formData.message = "";
   }
   
   function onFormInput(event) {
